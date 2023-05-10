@@ -1,0 +1,284 @@
+html{
+  overflow: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Times New Roman;
+  
+}
+
+body {
+  padding-top: 8em;
+  height: 100vh;
+  background-color: #000;
+  background-image: url('image/index.png');
+  background-size: cover;
+  background-position: center;
+ }
+
+ li{
+  list-style:none;
+ }
+
+ a{
+  text-decoration: none;
+  color:#fff;
+  font-size: 1.2rem;
+ }
+
+ a:hover{
+  color: orange;
+ }
+/* HEADER */
+ header{
+  position:relative;
+  position: fixed;
+  padding:0 1rem;
+  padding-top: 1em;
+  z-index: 90;
+  backdrop-filter: blur(2px);
+  height: 120px;
+  width: 100%;
+  margin: 0 auto;
+  top: 0em;
+  left: 0;
+}
+
+.navbar a {
+  position: relative;
+  font-size: 1.3em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+  z-index: 99;
+  }
+  
+  .navbar a::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scale(0);
+  transition: transform .5s;
+  }
+  
+  
+  .navbar a:hover::after{
+      transform-origin: left;
+      transform: scale(1);
+  }
+  
+  .navbar .bthLogin-popup{
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-left: 40px;
+  }
+  
+  .navbar .bthLogin-popup:hover{
+  background: #fff;
+  color: #162938;
+  }
+
+.navbar{
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin:  0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: hsl(35, 100%, 30%);
+  z-index: 99;
+}
+
+.navbar .logo a{
+  font-size: 1.5rem;
+  font-weight: bold;/*жирный шрифт*/
+}
+
+.navbar .links{
+  display: flex;
+  gap: 2rem;/*промежуток*/
+}
+
+.navbar .toggle_bth{
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+
+}
+
+.bthLogin-popup,.bthLogin-popup_drop{
+  background-color: orange;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale o.2 ease;
+}
+
+.bthLogin-popup_drop:hover,.bthLogin-popup:hover{
+  scale:1.05;
+  color:#fff
+}
+
+.bthLogin-popup:active,.bthLogin-popup_drop{
+  scale:0.95;
+}
+/* END HEADER */
+
+
+/* DROPDOWN MENU */
+.dropdown_menu{
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background: rgba(60, 78, 76, 0.7);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: heiht .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+.dropdown_menu.open{
+  height: 150px;
+}
+
+.dropdown_menu li{
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_menu .bthLogin-popup{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+/* END DROPDOWN MENU */
+
+
+/* HERO */
+section#hero{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+#hero h1{
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+@media(max-width: 1400px){
+  html{overflow: auto;}
+}
+
+@media(max-width: 1100px) {
+
+  .wrapper div{
+    padding: 0; 
+    margin: 0;
+    grid-column-start: -1;
+    grid-column-end: -3;
+    color: #fff;
+    grid-template-columns: 80%;
+   }
+}
+
+
+/* RESPONSIVE DISIGN */
+@media(max-width: 992px) {
+  .navbar .links,
+  .navbar .bthLogin-popup,
+  .navbar .bthLogin-popup_drop{
+    display: none;
+  }
+
+  .navbar .toggle_bth{
+    display: block;
+  }
+
+  .dropdown_menu{
+    display: block;
+  }
+}
+
+@media(max-width: 576px) {
+  .dropdown_menu{
+    left: 2rem;
+    width: unset;
+  }
+}
+/* END RESPONSIVE DISIGN */
+
+
+.wrapper{
+  padding: 0; 
+  margin: 0;
+  display: grid;
+  grid-template-columns: 35% 35%;
+  color: #fff;
+  grid-gap: 1em;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom:1em ;
+  padding-top:1em ;
+  
+ }
+ 
+
+.wrapper  div{
+  padding: 1em;
+  margin: 0.2em;
+  grid-auto-flow: column;
+  justify-content: center;
+  background-color: #ed7383;
+  backdrop-filter: blur(30px) brightness(120%);
+  opacity: .9;
+  border: 2px solid rgba(255, 255 ,255, .5);
+  border-radius: 20px;
+}
+
+.wrapper  div.light {
+  padding: 1em;
+  margin: 0.2em;
+  background-color: #ecc6cb;
+}
+
+.wrapper  img{
+  max-width: 8em;
+  float: right; /* Выравнивание по правому краю  */ 
+  border-radius: 100px; /* Радиус скругления */
+}
+

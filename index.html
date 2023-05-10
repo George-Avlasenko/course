@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <title>курсовая</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <a href="index.html"><img class="logo" src="svg/logo.svg" width="100px" height="100px">SpecMotors</a>
+        <ul class="links">
+          <li><a href="Services.html">Услуги</a></li>
+          <li><a href="About.html">О компании</a></li>
+          <li><a href="Contact.html">Контакты</a></li>
+        </ul>
+        <button class="bthLogin-popup">Войти</button>
+          <div class="toggle_bth">
+            <i class="fa-solid fa-bars"></i>
+         </div>
+      </div>
+
+      <div class="dropdown_menu">
+        <li><a href="Services.html">Услуги</a></li>
+        <li><a href="About.html">О компании</a></li>
+        <li><a href="Contact.html">Контакты</a></li>
+        <li><a href="#" class="bthLogin-popup_drop">Войти</a></li>
+      </div>
+    </header>
+
+    <section id="hero">
+      <h2>
+         <XML ID="dsoBook">
+            <?xml version="1.0"?>
+         Добро пожаловать в SpecMotors – профессиональную автомастерскую, где мы с гордостью предоставляем качественные услуги по ремонту автомобилей. Наша команда опытных механиков и техников стремится обеспечить максимальный уровень удовлетворенности наших клиентов. Мы предлагаем широкий спектр услуг по обслуживанию и ремонту автомобилей всех марок и моделей, используя только лучшие запчасти и материалы. Мы заботимся о том, чтобы ваш автомобиль был в идеальном состоянии и давал максимальное удовольствие от вождения. Спасибо, что выбрали SpecMotors – ваш автомобиль в надежных руках наших профессионалов!
+      </XML>
+      </h2>
+    </section>
+
+    <div class="wrapper">
+      <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+      <div class="form-box login">
+          <h2>Вход</h2>
+          <form action="#" onsubmit="return false">
+              <div class="input-box">
+                  <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                  <input type="text" name="Email" required>
+                  <label>Почта</label>
+               </div>
+               <div class="input-box">
+                  <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                  <input type="password" name="Password" required>
+                  <label>Пароль</label>
+               </div>
+               <div class="remember-forgot">
+                  <label><input type="checkbox">Запомнить меня</label>
+                  <a href="#">Забыли пароль?</a>
+               </div>
+               <button type="submit" class="bth" onclick="saveToXml()">Войти</button>
+               <div class="login-register">
+                  <p>Нет аккаунта?<a href="#" class="register-link">  Зарегистрируйтесь</a></p>
+               </div>
+          </form>
+      </div>  
+  
+      <div class="form-box register">
+          <h2>Регистрация</h2>
+          <form action="#">
+              <div class="input-box">
+                  <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                  <input type="text" required>
+                  <label>Имя пользователя</label>
+               </div>
+               <div class="input-box">
+                  <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                  <input id="Email_input" type="text" required>
+                  <label>Почта</label>
+               </div>
+               <div class="input-box">
+                  <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                  <input type="password" required>
+                  <label>пароль</label>
+               </div>
+               <div class="remember-forgot">
+                  <label><input type="checkbox"> Ясогласен с правилами и условиями</label>
+               </div>
+               <button type="submit" class="bth">Зарегистрироваться</button>
+               <div class="login-register">
+                  <p>Уже есть аккаунт?<a href="#" class="login-link">  Войти</a></p>
+               </div>
+          </form>
+      </div>  
+  </div>
+
+     <script src="js/index.js"></script>
+     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
